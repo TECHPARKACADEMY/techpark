@@ -17,8 +17,46 @@
     <meta property="og:url" content="https://www.techparkacademy.co.in">
     <meta property="og:type" content="website">
 
-    <!-- Linking external style.css -->
+    <!-- AOS Animation CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- External style.css -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <style>
+        /* Side-by-side Branch Layout */
+        .branches-container {
+            display: flex;
+            gap: 30px;
+            max-width: 1100px;
+            margin: auto;
+            flex-wrap: wrap;
+        }
+
+        .branch-card {
+            flex: 1;
+            min-width: 320px;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-top: 5px solid #8b0000;
+        }
+
+        .branch-card h3 {
+            color: #8b0000;
+            font-size: 24px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        @media(max-width: 768px) {
+            .branches-container {
+                flex-direction: column;
+            }
+        }
+    </style>
 
     <script type="application/ld+json">
     {
@@ -47,14 +85,14 @@
 </header>
 
 <section id="home" class="hero">
-    <div class="hero-content">
+    <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
         <h1>Welcome to Tech Park Academy</h1>
         <p><b>CREATION / INNOVATION / DEVELOPMENT</b></p>
         <a href="#courses" class="btn">Explore Courses</a>
     </div>
 </section>
 
-<section id="about" class="about">
+<section id="about" class="about" data-aos="fade-up" data-aos-duration="1000">
     <h2>About Us</h2>
     <p>
         Tech Park Academy is a Professional Training Academy in Karaikudi. We offer Python, Java, Web Development, C Programming, Full Stack Development, Tally Prime, MS Office, Computer Hardware & Software Training, Spoken English, Spoken Hindi, Kid's Cursive Writing, and College/Diploma Internship Programs. We focus on Practical learning and Career-oriented Training.
@@ -62,10 +100,10 @@
 </section>
 
 <section class="md-section">
-    <div class="md-image">
+    <div class="md-image" data-aos="fade-right" data-aos-duration="1000">
         <img src="{{ url_for('static', filename='images/md.png') }}" alt="Managing Director">
     </div>
-    <div class="md-content">
+    <div class="md-content" data-aos="fade-left" data-aos-duration="1000">
         <h2>Message from Techpark</h2>
         <p><b>Our Mission:</b> To Provide Quality Education and Practical Training that empowers students with Industry-ready skills.</p>
         <p><b>Our Vision:</b> We believe in Creation, Innovation, and Development, helping every learner achieve their Career Goals.</p>
@@ -77,76 +115,76 @@
 </section>
 
 <section id="courses" class="courses">
-    <h2>Our Courses</h2>
+    <h2 data-aos="fade-up">Our Courses</h2>
     <div class="course-container">
         
-        <div class="card">
+        <div class="card" data-aos="zoom-in" data-aos-delay="100">
             <h3>Python Programming</h3>
             <p>Learn Python from basics to advanced with hands-on projects.</p>
             <a href="/enquiry/python" class="btn">Enquire Now</a>
         </div>
 
-        <div class="card">
+        <div class="card" data-aos="zoom-in" data-aos-delay="150">
             <h3>Java Programming</h3>
             <p>Master Core Java and object-oriented programming concepts.</p>
             <a href="/enquiry/java" class="btn">Enquire Now</a>
         </div>
 
-        <div class="card">
+        <div class="card" data-aos="zoom-in" data-aos-delay="200">
             <h3>Web Development</h3>
             <p>HTML, CSS, and JavaScript responsive website development.</p>
             <a href="/enquiry/web" class="btn">Enquire Now</a>
         </div>
 
-        <div class="card">
+        <div class="card" data-aos="zoom-in" data-aos-delay="250">
             <h3>C Programming</h3>
             <p>Strong programming fundamentals and logic building.</p>
             <a href="/enquiry/c" class="btn">Enquire Now</a>
         </div>
 
-        <div class="card">
+        <div class="card" data-aos="zoom-in" data-aos-delay="300">
             <h3>Full Stack Development</h3>
             <p>Frontend and backend development with real-world projects.</p>
             <a href="/enquiry/fullstack" class="btn">Enquire Now</a>
         </div>
 
-        <div class="card">
+        <div class="card" data-aos="zoom-in" data-aos-delay="350">
             <h3>Internship Training</h3>
             <p>Real-time project experience and industry exposure.</p>
             <a href="/enquiry/internship" class="btn">Enquire Now</a>
         </div>
 
-        <div class="card">
+        <div class="card" data-aos="zoom-in" data-aos-delay="400">
             <h3>Tally Prime</h3>
             <p>Learn accounting, GST, inventory, and business management using Tally Prime.</p>
             <a href="/enquiry/tally" class="btn">Enquire Now</a>
         </div>
 
-        <div class="card">
+        <div class="card" data-aos="zoom-in" data-aos-delay="450">
             <h3>MS Office</h3>
             <p>Master Microsoft Word, Excel, PowerPoint, and Office productivity tools.</p>
             <a href="/enquiry/msoffice" class="btn">Enquire Now</a>
         </div>
 
-        <div class="card">
+        <div class="card" data-aos="zoom-in" data-aos-delay="500">
             <h3>Hardware & Software</h3>
             <p>Computer hardware installation, troubleshooting, and software maintenance.</p>
             <a href="/enquiry/hardware" class="btn">Enquire Now</a>
         </div>
 
-        <div class="card">
+        <div class="card" data-aos="zoom-in" data-aos-delay="550">
             <h3>Spoken English</h3>
             <p>Improve communication, grammar, vocabulary, and interview skills.</p>
             <a href="/enquiry/spokenenglish" class="btn">Enquire Now</a>
         </div>
 
-        <div class="card">
+        <div class="card" data-aos="zoom-in" data-aos-delay="600">
             <h3>Spoken Hindi</h3>
             <p>Learn Hindi speaking, reading, and writing skills for career growth.</p>
             <a href="/enquiry/hindi" class="btn">Enquire Now</a>
         </div>
 
-        <div class="card">
+        <div class="card" data-aos="zoom-in" data-aos-delay="650">
             <h3>College Project Training</h3>
             <p>Guidance for final year projects in Python, Java, Web Development & IoT.</p>
             <a href="/enquiry/collegeproject" class="btn">Enquire Now</a>
@@ -156,21 +194,21 @@
 </section>
 
 <section class="why-us">
-    <h2>Why Choose Us?</h2>
+    <h2 data-aos="fade-up">Why Choose Us?</h2>
     <div class="features">
-        <div class="feature-box">
+        <div class="feature-box" data-aos="fade-up" data-aos-delay="100">
             <h3>Expert Trainers</h3>
             <p>Learn from experienced industry professionals.</p>
         </div>
-        <div class="feature-box">
+        <div class="feature-box" data-aos="fade-up" data-aos-delay="200">
             <h3>Practical Learning</h3>
             <p>Hands-on training with real-time projects.</p>
         </div>
-        <div class="feature-box">
+        <div class="feature-box" data-aos="fade-up" data-aos-delay="300">
             <h3>Internship Support</h3>
             <p>Industry-level exposure and practical guidance.</p>
         </div>
-        <div class="feature-box">
+        <div class="feature-box" data-aos="fade-up" data-aos-delay="400">
             <h3>Career Guidance</h3>
             <p>Resume preparation and interview practice support.</p>
         </div>
@@ -178,27 +216,49 @@
 </section>
 
 <section id="contact" class="courses">
-    <h2>Contact Us</h2>
-    <div class="contact-details">
-        <div class="contact-row">
-            <div class="label">Branch:</div>
-            <div class="value"><b>Karaikudi Main Branch</b></div>
+    <h2 data-aos="fade-up">Contact Us</h2>
+    
+    <div class="branches-container">
+        <!-- Karaikudi Branch (Left Side) -->
+        <div class="branch-card" data-aos="fade-right" data-aos-duration="1000">
+            <h3>Karaikudi Main Branch</h3>
+            <div class="contact-row">
+                <div class="label">Address:</div>
+                <div class="value">1/8 First Floor, Lovely Arcade Complex, V.O.C Road, Opp to Selvi Petrol Bunk, Karaikudi - 630001</div>
+            </div>
+            <div class="contact-row">
+                <div class="label">Mobile:</div>
+                <div class="value">+91 9159315900</div>
+            </div>
+            <div class="contact-row">
+                <div class="label">Telephone:</div>
+                <div class="value">04565-255900</div>
+            </div>
+            <div class="contact-row">
+                <div class="label">Email:</div>
+                <div class="value">techparkacademy.kkdi@gmail.com</div>
+            </div>
         </div>
-        <div class="contact-row">
-            <div class="label">Address:</div>
-            <div class="value">1/8 First Floor, Lovely Arcade Complex, V.O.C Road, Opp to Selvi Petrol Bunk, Karaikudi - 630001</div>
-        </div>
-        <div class="contact-row">
-            <div class="label">Mobile:</div>
-            <div class="value">+91 9159315900</div>
-        </div>
-        <div class="contact-row">
-            <div class="label">Telephone:</div>
-            <div class="value">04565-255900</div>
-        </div>
-        <div class="contact-row">
-            <div class="label">Email:</div>
-            <div class="value">techparkacademy.kkdi@gmail.com</div>
+
+        <!-- Ariyakudi Branch (Right Side) -->
+        <div class="branch-card" data-aos="fade-left" data-aos-duration="1000">
+            <h3>Tech Park Academy 2.0</h3>
+            <div class="contact-row">
+                <div class="label">Address:</div>
+                <div class="value">Shop No.318/4,5, Lakshmi Srinivasa Nagar, Ariyakudi Main Road, Ariyakudi - 630 202. Sivagangai District.</div>
+            </div>
+            <div class="contact-row">
+                <div class="label">Mobile:</div>
+                <div class="value">+91 9159315900</div>
+            </div>
+            <div class="contact-row">
+                <div class="label">Telephone:</div>
+                <div class="value">04565-255900</div>
+            </div>
+            <div class="contact-row">
+                <div class="label">Email:</div>
+                <div class="value">techparkacademy.kkdi@gmail.com</div>
+            </div>
         </div>
     </div>
 </section>
@@ -206,6 +266,15 @@
 <footer>
     <p>© 2026 Tech Park Academy. All Rights Reserved.</p>
 </footer>
+
+<!-- AOS Animation Script -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 800,
+        once: true
+    });
+</script>
 
 </body>
 </html>
