@@ -3,286 +3,239 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Tech Park Academy | Python, C, java, AI & Web Development Training</title>
-
-    <meta name="description"
-          content="Tech Park Academy offers Python, C#, .NET, AI, Web Development and Programming courses with practical projects, hands-on training and career guidance.">
-
-    <meta name="keywords"
-          content="Python Course, C# Training, .NET Training, AI Course, Web Development Course, Programming Classes, Tech Park Academy">
-
+    <meta name="description" content="Tech Park Academy offers Python, C#, .NET, AI, Web Development and Programming courses with practical projects, hands-on training and career guidance.">
+    <meta name="keywords" content="Python Course, C# Training, .NET Training, AI Course, Web Development Course, Programming Classes, Tech Park Academy">
     <meta name="robots" content="index, follow">
 
     <link rel="canonical" href="https://www.techparkacademy.co.in/">
-
-    <link rel="stylesheet"
-          href="{{ url_for('static', filename='css/style.css') }}">
-          
-    <link rel="icon"
-      type="image/jpeg"
-      href="{{ url_for('static', filename='images/icon.jpeg') }}">
-
-      <link rel="icon" href="https://www.techparkacademy.co.in/static/images/icon.jpeg">
-        <link rel="shortcut icon" href="https://www.techparkacademy.co.in/static/images/icon.jpeg">
+    <link rel="icon" type="image/jpeg" href="{{ url_for('static', filename='images/icon.jpeg') }}">
+    <link rel="shortcut icon" href="https://www.techparkacademy.co.in/static/images/icon.jpeg">
 
     <meta property="og:title" content="Tech Park Academy">
     <meta property="og:description" content="Python, C#, .NET, AI & Web Development Training in Karaikudi">
     <meta property="og:url" content="https://www.techparkacademy.co.in">
     <meta property="og:type" content="website">
+
     <script type="application/ld+json">
     {
-    "@context": "https://schema.org",
- "@type": "EducationalOrganization",
- "name": "Tech Park Academy",
- "url": "https://www.techparkacademy.co.in",
- "logo": "https://www.techparkacademy.co.in/static/images/icon.jpeg",
- "telephone": "+91 9159315900"
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        "name": "Tech Park Academy",
+        "url": "https://www.techparkacademy.co.in",
+        "logo": "https://www.techparkacademy.co.in/static/images/icon.jpeg",
+        "telephone": "+91 9159315900"
     }
-    
-</script>
+    </script>
 
+    <style>
+        /* Base & Animation Styles */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        html { scroll-behavior: smooth; }
+        body { background-color: #f8f9fa; color: #333; line-height: 1.6; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-fade { animation: fadeIn 0.8s ease-out forwards; }
+        
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 12px 20px rgba(0,0,0,0.15) !important;
+        }
+
+        .btn-hover {
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .btn-hover:hover {
+            transform: scale(1.05);
+            background-color: #003d80 !important;
+        }
+    </style>
 </head>
 <body>
 
-<header>
-    <nav class="navbar">
-
-        <div class="logo-section">
-            <img src="{{ url_for('static', filename='images/logo.jpeg') }}" alt="Logo">
-            <h2>TECH PARK ACADEMY</h2>
+<header style="background: #ffffff; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000;">
+    <nav style="display: flex; justify-content: space-between; align-items: center; padding: 15px 5%; max-width: 1200px; margin: 0 auto;">
+        <div style="display: flex; align-items: center; gap: 10px;">
+            <img src="{{ url_for('static', filename='images/logo.jpeg') }}" alt="Logo" style="height: 45px; border-radius: 5px;">
+            <h2 style="color: #0056b3; font-size: 1.4rem;">TECH PARK ACADEMY</h2>
         </div>
-
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#courses">Courses</a></li>
-            <li><a href="#contact">Contact</a></li>
+        <ul style="display: flex; list-style: none; gap: 20px;">
+            <li><a href="#home" style="text-decoration: none; color: #333; font-weight: 600;">Home</a></li>
+            <li><a href="#about" style="text-decoration: none; color: #333; font-weight: 600;">About</a></li>
+            <li><a href="#courses" style="text-decoration: none; color: #333; font-weight: 600;">Courses</a></li>
+            <li><a href="#contact" style="text-decoration: none; color: #333; font-weight: 600;">Contact</a></li>
         </ul>
-
     </nav>
 </header>
 
-<section id="home" class="hero">
-
-    <div class="hero-content">
-
-        <h1>Welcome to Tech Park Academy</h1>
-
-        <p>
-            <b>CREATION / INNOVATION / DEVELOPMENT</b>
-        </p>
-
-        <a href="#courses" class="btn">
-            Explore Courses
-        </a>
-
+<section id="home" class="animate-fade" style='background: linear-gradient(rgba(0,86,179,0.8), rgba(0,0,0,0.7)), url("{{ url_for(\"static\", filename=\"images/hero-bg.jpg\") }}") center/cover; padding: 100px 20px; text-align: center; color: white;'>
+    <div style="max-width: 800px; margin: 0 auto;">
+        <h1 style="font-size: 2.8rem; margin-bottom: 15px;">Welcome to Tech Park Academy</h1>
+        <p style="font-size: 1.2rem; margin-bottom: 25px; letter-spacing: 2px;"><b>CREATION / INNOVATION / DEVELOPMENT</b></p>
+        <a href="#courses" class="btn-hover" style="display: inline-block; padding: 12px 30px; background: #0056b3; color: white; text-decoration: none; border-radius: 25px; font-weight: bold;">Explore Courses</a>
     </div>
-
 </section>
 
-<section id="about" class="about">
-
-    <h2>About us</h2>
-
-    <p>
-        Tech Park Academy is a Professional Training Academy in Karaikudi.
-        We are offering Python, Java, Web Development, C Programming,
-        Full Stack Development, Tally Prime, MS Office,
-        Computer Hardware & Software Training, Spoken English, 
-        Spoken Hindi, Kid's Cursive Writing and School, Colleges, Diploma, ITI/ITS Related Internship Programs.
-        We focus on Practical learning and Career-oriented Training.
-</p>
-
-</section>
-
-<section class="md-section">
-
-     <div class="md-image"> 
-        <img src="{{ url_for('static', filename='images/md.png') }}" alt="Managing Director">
-    </div> 
-
-   <!--  <div class="md-image">
-    <div class="profile-avatar">
-        👨‍💼
-    </div>
-</div>-->
-
-    <div class="md-content">
-
-        <h2>Message from Techpark</h2>
-
-        <p>
-            <b>Our Mission </b>is to Provide
-            Quality Education. And  Practical Training that empowers
-            students with Industry-ready skills.</p>
-            <p><b>Our Vision </b> is believe in
-            Creation, Innovation and Development. Helping every
-            learner achieve their Career Goals.
-        </p>
-
-        <h3>Proprietor </h3>
-        <p><b>Mr.ANANDH K</b>,B.Tech (I.T), M.E.,( Embedded System Technologies)</p>
-        
-        <h3>Manager</h3>
-        <p><b>Mr.Senthil P</b> Diploma.,(EEE) <p>
-
-    </div>
-
-</section>
-
-<section id="courses" class="courses">
-
-    <h2>Our Courses</h2>
-
-    <div class="course-container">
-
-        <div class="card">
-            <h3>Python Programming</h3>
-            <p>Learn Python from basics to advanced with projects.</p>
-            <a href="/enquiry/python" class="btn">Enquire Now</a>
-        </div>
-
-        <div class="card">
-            <h3>Java Programming</h3>
-            <p>Master Core Java and object-oriented programming.</p>
-             <a href="/enquiry/java" class="btn">Enquire Now</a>
-        </div>
-
-        <div class="card">
-            <h3>Web Development</h3>
-            <p>HTML, CSS and JavaScript website development.</p>
-            <a href="/enquiry/web" class="btn">Enquire Now</a>
-        </div>
-
-        <div class="card">
-            <h3>C Programming</h3>
-            <p>Strong programming fundamentals and logic building.</p>
-             <a href="/enquiry/c" class="btn">Enquire Now</a>
-        </div>
-
-        <div class="card">
-            <h3>Full Stack Development</h3>
-            <p>Frontend and backend development with projects.</p>
-             <a href="/enquiry/fullstack" class="btn">Enquire Now</a>
-        </div>
-
-        <div class="card">
-            <h3>Internship Training</h3>
-            <p>Real-time project experience and industry exposure.</p>
-            <a href="/enquiry/internship" class="btn">Enquire Now</a>
-        </div>
-
-        <div class="card">
-    <h3>Tally Prime</h3>
-    <p>Learn accounting, GST, inventory and business management using Tally Prime.</p>
-    <a href="/enquiry/tally" class="btn">Enquire Now</a>
-</div>
-
-<div class="card">
-    <h3>MS Office</h3>
-    <p>Master Microsoft Word, Excel, PowerPoint and Office productivity tools.</p>
-    <a href="/enquiry/msoffice" class="btn">Enquire Now</a>
-</div>
-
-<div class="card">
-    <h3>Hardware & Software Training</h3>
-    <p>Computer hardware installation, troubleshooting and software maintenance.</p>
-     <a href="/enquiry/hardware" class="btn">Enquire Now</a>
-</div>
-
-<div class="card">
-    <h3>Spoken English</h3>
-    <p>Improve communication, grammar, vocabulary and interview skills.</p>
-     <a href="/enquiry/spokenenglish" class="btn">Enquire Now</a>
-</div>
-
-    <div class="card">
-    <h3>Spoken Hindi</h3>
-    <p>Learn Hindi speaking, reading and writing skills for communication and career growth.</p>
-    <a href="/enquiry/hindi" class="btn">Enquire Now</a>
-</div>
-
-<div class="card">
-    <h3>College Project Training</h3>
-    <p>Guidance and development support for final year projects in Python, Java, Web Development and IoT.</p>
-    <a href="/enquiry/collegeproject" class="btn">Enquire Now</a>
-</div>
-
-    </div>
-
-</section>
-
-<section class="why-us">
-
-    <h2>Why Choose Us?</h2>
-
-    <div class="features">
-
-        <div class="feature-box">
-            <h3>Expert Trainers</h3>
-            <p>Learn from experienced professionals.</p>
-        </div>
-
-        <div class="feature-box">
-            <h3>Practical Learning</h3>
-            <p>Hands-on training with real projects.</p>
-        </div>
-
-        <div class="feature-box">
-            <h3>Internship Support</h3>
-            <p>Industry-level exposure and guidance.</p>
-        </div>
-
-        <div class="feature-box">
-            <h3>Career Guidance</h3>
-            <p>Resume preparation and interview support.</p>
-        </div>
-
-    </div>
-
-</section>
-
-<section id="contact" class="contact">
-
-    <h2>Contact Us</h2>
-
-    <div class="contact-details">
-
-        <div class="contact-row">
-            <span class="label">Address </span>
-            <span class="value">
-                1/8 First Floor, Lovely Arcade Complex,<br>
-                V.O.C Road, Opp to Selvi Petrol Bunk,<br>
-                Karaikudi - 630001
-            </span>
-        </div>
-
-        <div class="contact-row">
-            <span class="label">Mobile </span>
-            <span class="value">+91 9159315900</span>
-        </div>
-
-        <div class="contact-row">
-            <span class="label">Telephone </span>
-            <span class="value">04565-255900</span>
-        </div>
-
-        <div class="contact-row">
-            <span class="label">Email </span>
-            <span class="value">techparkacademy.kkdi@gmail.com</span>
-        </div>
-
-    </div>
-
-</section>
-
-<footer>
-
-    <p>
-        © 2026 Tech Park Academy. All Rights Reserved.
+<section id="about" class="animate-fade" style="padding: 60px 20px; max-width: 1000px; margin: 0 auto; text-align: center;">
+    <h2 style="color: #0056b3; margin-bottom: 20px; font-size: 2rem;">About Us</h2>
+    <p style="font-size: 1.1rem; color: #555;">
+        Tech Park Academy is a Professional Training Academy in Karaikudi. We are offering Python, Java, Web Development, C Programming, Full Stack Development, Tally Prime, MS Office, Computer Hardware & Software Training, Spoken English, Spoken Hindi, Kid's Cursive Writing and School, Colleges, Diploma, ITI/ITS Related Internship Programs. We focus on Practical learning and Career-oriented Training.
     </p>
+</section>
 
+<section class="animate-fade" style="background: #fff; padding: 50px 20px; max-width: 1100px; margin: 20px auto; border-radius: 12px; display: flex; gap: 30px; align-items: center; flex-wrap: wrap; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+    <div style="flex: 1; min-width: 250px; text-align: center;"> 
+        <img src="{{ url_for('static', filename='images/md.png') }}" alt="Managing Director" style="max-width: 100%; border-radius: 10px; height: auto;">
+    </div> 
+    <div style="flex: 2; min-width: 300px;">
+        <h2 style="color: #0056b3; margin-bottom: 15px;">Message from Techpark</h2>
+        <p style="margin-bottom: 10px;"><b>Our Mission:</b> To Provide Quality Education and Practical Training that empowers students with Industry-ready skills.</p>
+        <p style="margin-bottom: 20px;"><b>Our Vision:</b> We believe in Creation, Innovation and Development, helping every learner achieve their Career Goals.</p>
+        <h3 style="color: #333; font-size: 1.1rem;">Proprietor</h3>
+        <p style="margin-bottom: 10px;"><b>Mr. ANANDH K</b>, B.Tech (I.T), M.E., (Embedded System Technologies)</p>
+        <h3 style="color: #333; font-size: 1.1rem;">Manager</h3>
+        <p><b>Mr. Senthil P</b>, Diploma (EEE)</p>
+    </div>
+</section>
+
+<section id="courses" class="animate-fade" style="padding: 60px 20px; max-width: 1200px; margin: 0 auto;">
+    <h2 style="text-align: center; color: #0056b3; margin-bottom: 40px; font-size: 2rem;">Our Courses</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
+        
+        <div class="card-hover" style="background: white; padding: 25px; border-radius: 10px; border: 1px solid #eee; box-shadow: 0 4px 10px rgba(0,0,0,0.03);">
+            <h3 style="color: #0056b3; margin-bottom: 10px;">Python Programming</h3>
+            <p style="color: #666; margin-bottom: 15px;">Learn Python from basics to advanced with projects.</p>
+            <a href="/enquiry/python" class="btn-hover" style="display: inline-block; padding: 8px 18px; background: #0056b3; color: white; text-decoration: none; border-radius: 5px; font-size: 0.9rem;">Enquire Now</a>
+        </div>
+
+        <div class="card-hover" style="background: white; padding: 25px; border-radius: 10px; border: 1px solid #eee; box-shadow: 0 4px 10px rgba(0,0,0,0.03);">
+            <h3 style="color: #0056b3; margin-bottom: 10px;">Java Programming</h3>
+            <p style="color: #666; margin-bottom: 15px;">Master Core Java and object-oriented programming.</p>
+            <a href="/enquiry/java" class="btn-hover" style="display: inline-block; padding: 8px 18px; background: #0056b3; color: white; text-decoration: none; border-radius: 5px; font-size: 0.9rem;">Enquire Now</a>
+        </div>
+
+        <div class="card-hover" style="background: white; padding: 25px; border-radius: 10px; border: 1px solid #eee; box-shadow: 0 4px 10px rgba(0,0,0,0.03);">
+            <h3 style="color: #0056b3; margin-bottom: 10px;">Web Development</h3>
+            <p style="color: #666; margin-bottom: 15px;">HTML, CSS and JavaScript website development.</p>
+            <a href="/enquiry/web" class="btn-hover" style="display: inline-block; padding: 8px 18px; background: #0056b3; color: white; text-decoration: none; border-radius: 5px; font-size: 0.9rem;">Enquire Now</a>
+        </div>
+
+        <div class="card-hover" style="background: white; padding: 25px; border-radius: 10px; border: 1px solid #eee; box-shadow: 0 4px 10px rgba(0,0,0,0.03);">
+            <h3 style="color: #0056b3; margin-bottom: 10px;">C Programming</h3>
+            <p style="color: #666; margin-bottom: 15px;">Strong programming fundamentals and logic building.</p>
+            <a href="/enquiry/c" class="btn-hover" style="display: inline-block; padding: 8px 18px; background: #0056b3; color: white; text-decoration: none; border-radius: 5px; font-size: 0.9rem;">Enquire Now</a>
+        </div>
+
+        <div class="card-hover" style="background: white; padding: 25px; border-radius: 10px; border: 1px solid #eee; box-shadow: 0 4px 10px rgba(0,0,0,0.03);">
+            <h3 style="color: #0056b3; margin-bottom: 10px;">Full Stack Development</h3>
+            <p style="color: #666; margin-bottom: 15px;">Frontend and backend development with projects.</p>
+            <a href="/enquiry/fullstack" class="btn-hover" style="display: inline-block; padding: 8px 18px; background: #0056b3; color: white; text-decoration: none; border-radius: 5px; font-size: 0.9rem;">Enquire Now</a>
+        </div>
+
+        <div class="card-hover" style="background: white; padding: 25px; border-radius: 10px; border: 1px solid #eee; box-shadow: 0 4px 10px rgba(0,0,0,0.03);">
+            <h3 style="color: #0056b3; margin-bottom: 10px;">Internship Training</h3>
+            <p style="color: #666; margin-bottom: 15px;">Real-time project experience and industry exposure.</p>
+            <a href="/enquiry/internship" class="btn-hover" style="display: inline-block; padding: 8px 18px; background: #0056b3; color: white; text-decoration: none; border-radius: 5px; font-size: 0.9rem;">Enquire Now</a>
+        </div>
+
+        <div class="card-hover" style="background: white; padding: 25px; border-radius: 10px; border: 1px solid #eee; box-shadow: 0 4px 10px rgba(0,0,0,0.03);">
+            <h3 style="color: #0056b3; margin-bottom: 10px;">Tally Prime</h3>
+            <p style="color: #666; margin-bottom: 15px;">Learn accounting, GST, inventory and business management using Tally Prime.</p>
+            <a href="/enquiry/tally" class="btn-hover" style="display: inline-block; padding: 8px 18px; background: #0056b3; color: white; text-decoration: none; border-radius: 5px; font-size: 0.9rem;">Enquire Now</a>
+        </div>
+
+        <div class="card-hover" style="background: white; padding: 25px; border-radius: 10px; border: 1px solid #eee; box-shadow: 0 4px 10px rgba(0,0,0,0.03);">
+            <h3 style="color: #0056b3; margin-bottom: 10px;">MS Office</h3>
+            <p style="color: #666; margin-bottom: 15px;">Master Microsoft Word, Excel, PowerPoint and Office productivity tools.</p>
+            <a href="/enquiry/msoffice" class="btn-hover" style="display: inline-block; padding: 8px 18px; background: #0056b3; color: white; text-decoration: none; border-radius: 5px; font-size: 0.9rem;">Enquire Now</a>
+        </div>
+
+        <div class="card-hover" style="background: white; padding: 25px; border-radius: 10px; border: 1px solid #eee; box-shadow: 0 4px 10px rgba(0,0,0,0.03);">
+            <h3 style="color: #0056b3; margin-bottom: 10px;">Hardware & Software</h3>
+            <p style="color: #666; margin-bottom: 15px;">Computer hardware installation, troubleshooting and software maintenance.</p>
+            <a href="/enquiry/hardware" class="btn-hover" style="display: inline-block; padding: 8px 18px; background: #0056b3; color: white; text-decoration: none; border-radius: 5px; font-size: 0.9rem;">Enquire Now</a>
+        </div>
+
+        <div class="card-hover" style="background: white; padding: 25px; border-radius: 10px; border: 1px solid #eee; box-shadow: 0 4px 10px rgba(0,0,0,0.03);">
+            <h3 style="color: #0056b3; margin-bottom: 10px;">Spoken English</h3>
+            <p style="color: #666; margin-bottom: 15px;">Improve communication, grammar, vocabulary and interview skills.</p>
+            <a href="/enquiry/spokenenglish" class="btn-hover" style="display: inline-block; padding: 8px 18px; background: #0056b3; color: white; text-decoration: none; border-radius: 5px; font-size: 0.9rem;">Enquire Now</a>
+        </div>
+
+        <div class="card-hover" style="background: white; padding: 25px; border-radius: 10px; border: 1px solid #eee; box-shadow: 0 4px 10px rgba(0,0,0,0.03);">
+            <h3 style="color: #0056b3; margin-bottom: 10px;">Spoken Hindi</h3>
+            <p style="color: #666; margin-bottom: 15px;">Learn Hindi speaking, reading and writing skills for career growth.</p>
+            <a href="/enquiry/hindi" class="btn-hover" style="display: inline-block; padding: 8px 18px; background: #0056b3; color: white; text-decoration: none; border-radius: 5px; font-size: 0.9rem;">Enquire Now</a>
+        </div>
+
+        <div class="card-hover" style="background: white; padding: 25px; border-radius: 10px; border: 1px solid #eee; box-shadow: 0 4px 10px rgba(0,0,0,0.03);">
+            <h3 style="color: #0056b3; margin-bottom: 10px;">College Project Training</h3>
+            <p style="color: #666; margin-bottom: 15px;">Guidance for final year projects in Python, Java, Web Development & IoT.</p>
+            <a href="/enquiry/collegeproject" class="btn-hover" style="display: inline-block; padding: 8px 18px; background: #0056b3; color: white; text-decoration: none; border-radius: 5px; font-size: 0.9rem;">Enquire Now</a>
+        </div>
+
+    </div>
+</section>
+
+<section class="animate-fade" style="background: #eef5fc; padding: 60px 20px;">
+    <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
+        <h2 style="color: #0056b3; margin-bottom: 40px; font-size: 2rem;">Why Choose Us?</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px;">
+            <div class="card-hover" style="background: white; padding: 20px; border-radius: 8px;">
+                <h3 style="color: #333; margin-bottom: 8px;">Expert Trainers</h3>
+                <p style="color: #666; font-size: 0.95rem;">Learn from experienced professionals.</p>
+            </div>
+            <div class="card-hover" style="background: white; padding: 20px; border-radius: 8px;">
+                <h3 style="color: #333; margin-bottom: 8px;">Practical Learning</h3>
+                <p style="color: #666; font-size: 0.95rem;">Hands-on training with real projects.</p>
+            </div>
+            <div class="card-hover" style="background: white; padding: 20px; border-radius: 8px;">
+                <h3 style="color: #333; margin-bottom: 8px;">Internship Support</h3>
+                <p style="color: #666; font-size: 0.95rem;">Industry-level exposure and guidance.</p>
+            </div>
+            <div class="card-hover" style="background: white; padding: 20px; border-radius: 8px;">
+                <h3 style="color: #333; margin-bottom: 8px;">Career Guidance</h3>
+                <p style="color: #666; font-size: 0.95rem;">Resume preparation and interview support.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="animate-fade" style="padding: 60px 20px; max-width: 1200px; margin: 0 auto;">
+    <h2 style="text-align: center; color: #0056b3; margin-bottom: 30px; font-size: 2rem;">Contact Us</h2>
+    
+    <div style="display: flex; gap: 25px; flex-wrap: wrap; justify-content: center;">
+        
+        <!-- Karaikudi Branch Card -->
+        <div class="card-hover" style="flex: 1; min-width: 300px; max-width: 500px; background: white; padding: 30px; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 4px 10px rgba(0,0,0,0.03);">
+            <h3 style="color: #0056b3; border-bottom: 2px solid #0056b3; padding-bottom: 8px; margin-bottom: 15px;">Karaikudi Main Branch</h3>
+            <p style="margin-bottom: 10px;"><b>Address:</b> 1/8 First Floor, Lovely Arcade Complex, V.O.C Road, Opp to Selvi Petrol Bunk, Karaikudi - 630001</p>
+            <p style="margin-bottom: 10px;"><b>Mobile:</b> +91 9159315900</p>
+            <p style="margin-bottom: 10px;"><b>Telephone:</b> 04565-255900</p>
+            <p><b>Email:</b> techparkacademy.kkdi@gmail.com</p>
+        </div>
+
+        <!-- Ariyakudi Branch Card -->
+        <div class="card-hover" style="flex: 1; min-width: 300px; max-width: 500px; background: white; padding: 30px; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 4px 10px rgba(0,0,0,0.03);">
+            <h3 style="color: #0056b3; border-bottom: 2px solid #0056b3; padding-bottom: 8px; margin-bottom: 15px;">Ariyakudi Branch</h3>
+            <p style="margin-bottom: 10px;"><b>Address:</b> [Door No / Building Name], [Street Name], Ariyakudi, Karaikudi - 630202</p>
+            <p style="margin-bottom: 10px;"><b>Mobile:</b> +91 9159315900</p>
+            <p style="margin-bottom: 10px;"><b>Telephone:</b> 04565-255900</p>
+            <p><b>Email:</b> techparkacademy.kkdi@gmail.com</p>
+        </div>
+
+    </div>
+</section>
+
+<footer style="background: #111; color: white; text-align: center; padding: 20px; margin-top: 40px;">
+    <p>© 2026 Tech Park Academy. All Rights Reserved.</p>
 </footer>
 
 </body>
